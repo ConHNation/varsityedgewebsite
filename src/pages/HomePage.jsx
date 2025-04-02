@@ -130,10 +130,15 @@ export default function HomePage() {
           <div>
             <h2 className="text-3xl font-bold mb-2">What We Do</h2>
             <p>
-              Varsity Edge partners with athletes to create, manage, and operate camps branded in their name. We provide the coaches, gear, location, and organization — and you share in the profit.
+              Varsity Edge partners with athletes to create, manage, and operate camps branded in their name.
+              We provide the coaches, gear, location, and organization — and you share in the profit.
             </p>
           </div>
-          <div className="h-48 bg-gray-700 rounded-xl" />
+          <img
+            src="/1.jpg.webp"
+            alt="What We Do"
+            className="rounded-xl shadow-md h-48 w-full object-cover"
+          />
         </motion.div>
 
         <motion.div
@@ -143,11 +148,16 @@ export default function HomePage() {
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.2 }}
         >
-          <div className="h-48 bg-gray-700 rounded-xl md:order-2" />
+          <img
+            src="/2.jpg.webp"
+            alt="How It Works"
+            className="rounded-xl shadow-md h-48 w-full object-cover md:order-2"
+          />
           <div className="md:order-1">
             <h2 className="text-3xl font-bold mb-2">How It Works</h2>
             <p>
-              You reach out to us with your camp idea. We set it up using your NIL — think "Connor Hayden Quarterback Camp." We run the event, and you get paid a portion of the profits.
+              You reach out to us with your camp idea. We set it up using your NIL — think "Connor Hayden Quarterback Camp."
+              We run the event, and you get paid a portion of the profits.
             </p>
           </div>
         </motion.div>
@@ -162,10 +172,15 @@ export default function HomePage() {
           <div>
             <h2 className="text-3xl font-bold mb-2">Why Varsity Edge?</h2>
             <p>
-              We make hosting a personal-branded camp effortless. We handle every detail, provide expert coaching staff and equipment, and give athletes a new way to benefit from their name.
+              We make hosting a personal-branded camp effortless. We handle every detail, provide expert coaching staff
+              and equipment, and give athletes a new way to benefit from their name.
             </p>
           </div>
-          <div className="h-48 bg-gray-700 rounded-xl" />
+          <img
+            src="/3.jpg.webp"
+            alt="Why Varsity Edge"
+            className="rounded-xl shadow-md h-48 w-full object-cover"
+          />
         </motion.div>
       </section>
 
