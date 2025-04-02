@@ -14,7 +14,7 @@ const nameList = [
   "Bryce Edwards", "Gianna Lewis", "Logan Walker", "Madison Green"
 ];
 
-const fakeRegistrations = Array.from({ length: 172 }, (_, i) => {
+const fakeRegistrations = Array.from({ length: 40 }, (_, i) => {
   const name = nameList[i % nameList.length];
   const email = name.toLowerCase().replace(/[^a-z]/g, "") + "@athlete.com";
   return {
@@ -28,38 +28,38 @@ const fakeRegistrations = Array.from({ length: 172 }, (_, i) => {
 
 const dailyRegistrations = Array.from({ length: 14 }, (_, i) => ({
   day: `Day ${i + 1}`,
-  registrations: Math.floor(Math.random() * 40) + 10,
+  registrations: Math.floor(Math.random() * 5) + 2,
 }));
 
 const revenueByCamp = [
-  { name: "QB Elite", revenue: 4200 },
-  { name: "WR Academy", revenue: 3100 },
-  { name: "Linebacker Lab", revenue: 2900 },
-  { name: "Speed School", revenue: 3600 },
+  { name: "QB Elite", revenue: 2500 },
+  { name: "WR Academy", revenue: 2000 },
+  { name: "Linebacker Lab", revenue: 1500 },
+  { name: "Speed School", revenue: 3000 },
 ];
 
 const shirtSizes = [
-  { name: "S", value: 38 },
-  { name: "M", value: 68 },
-  { name: "L", value: 44 },
-  { name: "XL", value: 22 },
+  { name: "S", value: 10 },
+  { name: "M", value: 15 },
+  { name: "L", value: 10 },
+  { name: "XL", value: 5 },
 ];
 
 const positions = [
-  { name: "QB", value: 35 },
-  { name: "WR", value: 42 },
-  { name: "RB", value: 30 },
-  { name: "LB", value: 25 },
-  { name: "CB", value: 18 },
-  { name: "TE", value: 22 },
+  { name: "QB", value: 8 },
+  { name: "WR", value: 10 },
+  { name: "RB", value: 7 },
+  { name: "LB", value: 5 },
+  { name: "CB", value: 6 },
+  { name: "TE", value: 4 },
 ];
 
 const ages = [
-  { age: "14", count: 25 },
-  { age: "15", count: 41 },
-  { age: "16", count: 38 },
-  { age: "17", count: 46 },
-  { age: "18", count: 22 },
+  { age: "14", count: 8 },
+  { age: "15", count: 10 },
+  { age: "16", count: 9 },
+  { age: "17", count: 8 },
+  { age: "18", count: 5 },
 ];
 
 export default function Dashboard() {
@@ -108,11 +108,11 @@ export default function Dashboard() {
             <div className="grid md:grid-cols-3 gap-6">
               <div className="bg-gray-800 p-6 rounded-lg">
                 <h4 className="text-lg font-semibold mb-2">Registrations</h4>
-                <p className="text-3xl">172</p>
+                <p className="text-3xl">40</p>
               </div>
               <div className="bg-gray-800 p-6 rounded-lg">
                 <h4 className="text-lg font-semibold mb-2">Revenue</h4>
-                <p className="text-3xl">$12,940</p>
+                <p className="text-3xl">$9,000</p>
               </div>
               <div className="bg-gray-800 p-6 rounded-lg">
                 <h4 className="text-lg font-semibold mb-2">Messages</h4>
