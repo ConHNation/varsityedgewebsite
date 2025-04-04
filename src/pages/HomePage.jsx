@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { Instagram } from "lucide-react";
@@ -16,16 +17,16 @@ const testimonials = [
     quote: "I got to host a camp with my name on it, impact younger athletes, and earn through my NIL — amazing experience.",
   },
   {
-    name: "Jordan B.",
-    quote: "They made the whole process super easy. All I had to do was show up — and I got paid to do it.",
+    name: "Samantha G.",
+    quote: "These camps give you everything: skill, exposure, and a game plan for NIL success.",
   },
   {
-    name: "Sierra W.",
-    quote: "My camp sold out. Varsity Edge handled marketing, signups, and the entire operation. I just focused on the kids.",
+    name: "Jalen R.",
+    quote: "This camp helped me grow both on and off the field. The exposure through NIL was a game-changer.",
   },
   {
-    name: "Tyrese K.",
-    quote: "I’ve never run a camp before, but Varsity Edge made me feel like a pro. Definitely doing it again next year.",
+    name: "Avery T.",
+    quote: "I got real training from pro-level coaches and learned how to build my brand at the same time.",
   },
 ];
 
@@ -55,12 +56,12 @@ export default function HomePage() {
   return (
     <div className="p-6 space-y-12 bg-gray-900 text-white min-h-screen">
       {/* Navbar */}
-      <nav className="flex justify-between items-center py-4 px-6 bg-gray-800 text-white shadow-md rounded-xl">
+      <nav className="flex flex-col md:flex-row justify-between items-center gap-4 py-4 px-6 bg-gray-800 text-white shadow-md rounded-xl">
         <div className="text-2xl font-bold">Varsity Edge</div>
-        <ul className="flex space-x-6 text-sm md:text-base">
-          <li><a href="#" className="hover:text-blue-400">Home</a></li>
-          <li><a href="#" className="hover:text-blue-400">About</a></li>
-          <li><a href="#" className="hover:text-blue-400">Contact</a></li>
+        <ul className="flex flex-wrap justify-center gap-4 text-sm md:text-base">
+          <li><a href="/" className="hover:text-blue-400">Home</a></li>
+          <li><a href="#about" className="hover:text-blue-400">About</a></li>
+          <li><a href="#contact" className="hover:text-blue-400">Contact</a></li>
           <li><a href="/dashboard" className="hover:text-blue-400">Dashboard</a></li>
         </ul>
       </nav>
@@ -91,7 +92,7 @@ export default function HomePage() {
               animate={{ opacity: 1, x: 0 }}
               exit={{ opacity: 0, x: direction > 0 ? -100 : 100 }}
               transition={{ duration: 0.6 }}
-              className="grid md:grid-cols-3 gap-6 absolute w-full"
+              className="grid grid-cols-1 md:grid-cols-3 gap-6 absolute w-full"
             >
               {getVisibleTestimonials().map((testimonial, index) => (
                 <div key={index} className="rounded-2xl shadow-md bg-gray-800 text-white p-6">
@@ -119,9 +120,9 @@ export default function HomePage() {
       </section>
 
       {/* About Sections */}
-      <section className="space-y-12">
+      <section className="space-y-12" id="about">
         <motion.div
-          className="grid md:grid-cols-2 gap-6 items-center"
+          className="grid grid-cols-1 md:grid-cols-2 gap-6 items-center"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
@@ -130,30 +131,32 @@ export default function HomePage() {
           <div>
             <h2 className="text-3xl font-bold mb-2">What We Do</h2>
             <p>
-              Varsity Edge partners with athletes to create, manage, and operate camps branded in their name. We provide the coaches, gear, location, and organization — and you share in the profit.
+              Varsity Edge partners with athletes to create, manage, and operate camps branded in their name.
+              We provide the coaches, gear, location, and organization — and you share in the profit.
             </p>
           </div>
-          <div className="h-48 bg-gray-700 rounded-xl" />
+          <img src="/1.jpg.webp" alt="What We Do" className="rounded-xl shadow-md w-full h-auto object-cover" />
         </motion.div>
 
         <motion.div
-          className="grid md:grid-cols-2 gap-6 items-center"
+          className="grid grid-cols-1 md:grid-cols-2 gap-6 items-center"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.2 }}
         >
-          <div className="h-48 bg-gray-700 rounded-xl md:order-2" />
+          <img src="/2.jpg.webp" alt="How It Works" className="rounded-xl shadow-md w-full h-auto object-cover md:order-2" />
           <div className="md:order-1">
             <h2 className="text-3xl font-bold mb-2">How It Works</h2>
             <p>
-              You reach out to us with your camp idea. We set it up using your NIL — think "Connor Hayden Quarterback Camp." We run the event, and you get paid a portion of the profits.
+              You reach out to us with your camp idea. We set it up using your NIL — think "Connor Hayden Quarterback Camp."
+              We run the event, and you get paid a portion of the profits.
             </p>
           </div>
         </motion.div>
 
         <motion.div
-          className="grid md:grid-cols-2 gap-6 items-center"
+          className="grid grid-cols-1 md:grid-cols-2 gap-6 items-center"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
@@ -162,15 +165,16 @@ export default function HomePage() {
           <div>
             <h2 className="text-3xl font-bold mb-2">Why Varsity Edge?</h2>
             <p>
-              We make hosting a personal-branded camp effortless. We handle every detail, provide expert coaching staff and equipment, and give athletes a new way to benefit from their name.
+              We make hosting a personal-branded camp effortless. We handle every detail, provide expert coaching staff
+              and equipment, and give athletes a new way to benefit from their name.
             </p>
           </div>
-          <div className="h-48 bg-gray-700 rounded-xl" />
+          <img src="/3.jpg.webp" alt="Why Varsity Edge" className="rounded-xl shadow-md w-full h-auto object-cover" />
         </motion.div>
       </section>
 
       {/* Footer */}
-      <footer className="mt-20 text-center border-t border-gray-700 pt-6 pb-4 text-sm text-gray-400">
+      <footer className="mt-20 text-center border-t border-gray-700 pt-6 pb-4 text-sm text-gray-400" id="contact">
         <div className="flex justify-center mb-2">
           <a href={instagramLink} target="_blank" rel="noopener noreferrer" className="hover:text-white">
             <Instagram className="w-5 h-5" />
